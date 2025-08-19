@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract FreeToken {
+    string public name = "FreeToken";
+    string public symbol = "FREE";
+    uint8 public decimals = 18;
+    uint256 public totalSupply = 1000000 * 10**decimals;
+    
+    mapping(address => uint256) public balanceOf;
+    
+    constructor() {
+        balanceOf[msg.sender] = totalSupply;
+    }
+    
+    function claimAirdrop() public {
+        require(balanceOf[msg.sender] == 0, "Already claimed");
+        balanceOf[msg.sender] = 100 * 10**decimals;
+    }
+}
