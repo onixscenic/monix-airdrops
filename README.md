@@ -1,2 +1,3 @@
-# monix-airdrops
-Search  for available airdrops on markert
+# Meta AI Builder
+
+This repository contains the Meta AI Builder scaffold with various modules and integrations.
